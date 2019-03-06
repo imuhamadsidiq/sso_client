@@ -26,8 +26,8 @@ class CheckingSSO
          Redis::get('sso_bu_name');
          Redis::get('sso_site_id');
          Redis::get('sso_site_name');
-         Redis::get('sso_section_id');
-         Redis::get('sso_section_name');
+         Redis::get('sso_divisi_id');
+         Redis::get('sso_divisi_name');
          Redis::get('sso_dept_id');
          Redis::get('sso_dept_name');
          Redis::get("sso_app_APP");
