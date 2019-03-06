@@ -79,20 +79,35 @@
                 </div>
             @endif
 
-            <div class="content">
+            <div class="contents">
                 <div class="title m-b-md">
-                    Laravel
+                   SSO Client
                 </div>
+                <div>
+                    <?php  
+                     $redis = array(
+                         'sso_user_id'=>Redis::get('sso_user_id'),
+                         'sso_username'=>Redis::get('sso_username'),
+                         'sso_email'=>Redis::get('sso_email'),
+                         'sso_first_name'=>Redis::get('sso_first_name'),
+                         'sso_last_name'=>Redis::get('sso_last_name'),
+                         'sso_bu_id'=>Redis::get('sso_bu_id'),
+                         'sso_bu_name'=>Redis::get('sso_bu_name'),
+                         'sso_site_id'=>Redis::get('sso_site_id'),
+                         'sso_site_name'=>Redis::get('sso_site_name'),
+                         'sso_divisi_id'=>Redis::get('sso_divisi_id'),
+                         'sso_divisi_name'=>Redis::get('sso_divisi_name'),
+                         'sso_dept_id'=>Redis::get('sso_dept_id'),
+                         'sso_dept_name'=>Redis::get('sso_dept_name'),
+                         'sso_app_APP'=>Redis::get("sso_app_APP"),
+                         'sso_group_APP'=>Redis::get("sso_group_APP"),
+                         'sso_group_name_APP'=>Redis::get("sso_group_name_APP"),  
+                     );
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                     dd($redis);
+                    ?>
                 </div>
+               
             </div>
         </div>
     </body>
